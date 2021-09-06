@@ -1,0 +1,11 @@
+version: '3.6'
+services:
+  node:
+    image: node:12-alpine
+    command: yarn serve
+    user: node
+    volumes:
+      - ./:/var/www/vue-examples
+    working_dir: /var/www/vue-examples
+    ports:
+      - "4080:8080"
